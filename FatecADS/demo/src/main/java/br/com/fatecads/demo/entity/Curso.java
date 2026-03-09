@@ -16,28 +16,17 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Aluno {
+public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idAluno;
-    
-    @Column(nullable = false,length = 40)
-    private String nomeAluno;
+    private Integer idCurso;
+    @Column(nullable = false, length = 40)
+    private String nomeCurso;
 
     @Column(length = 80)
-    private String emailAluno;
-
-    @Column(nullable = false, length = 11)
-    private String telefoneAluno;
-
-    @Column(nullable =  false, length = 50)
-    private String enderecoAluno;
+    private String periodoCurso;
 
     @Column(nullable = false)
-    private String cpfAluno;
-
-    @Column(nullable = false)
-    private String raAluno;
+    private Integer cargaHorariaCurso;
 }
-
