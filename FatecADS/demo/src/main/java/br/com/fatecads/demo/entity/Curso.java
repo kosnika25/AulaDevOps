@@ -1,6 +1,5 @@
 package br.com.fatecads.demo.entity;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +20,7 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idCurso;
+    
     @Column(nullable = false, length = 40)
     private String nomeCurso;
 
