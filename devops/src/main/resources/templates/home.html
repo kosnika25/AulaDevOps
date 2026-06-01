@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema DevOps - Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sistema DevOps</div>
+            <ul class="nav-links">
+                <li><a href="/devops">Início</a></li>
+                <li><a href="/aluno/listar">Alunos</a></li>
+                <li><a href="/usuario/listar">Usuários</a></li>
+                <li><a href="/curso/listar">Cursos</a></li>
+                <li><a href="/professor/listar">Professores</a></li>
+                <li><a href="/disciplina/listar">Disciplinas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Bem-vindo ao Sistema DevOps</h1>
+        <p>Gerenciamento de Alunos, Cursos, Professores, Disciplinas e Usuários</p>
+    </div>
+
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; width: 100%; margin-top: 3rem;">
+            <!-- Card Alunos -->
+            <div style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1); text-align: center; border: 1px solid rgba(139, 92, 246, 0.3); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 56px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1)'">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: #8B5CF6;">👥</div>
+                <h2 style="color: #A78BFA; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Alunos</h2>
+                <p style="color: #CBD5E1; margin-bottom: 1.5rem; font-size: 0.95rem;">Gerencie os registros de alunos</p>
+                <a href="/aluno/listar" class="btn btn-primary" style="display: inline-block; width: auto;">Abrir Alunos →</a>
+            </div>
+
+            <!-- Card Cursos -->
+            <div style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1); text-align: center; border: 1px solid rgba(139, 92, 246, 0.3); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 56px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1)'">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: #06B6D4;">📚</div>
+                <h2 style="color: #22D3EE; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Cursos</h2>
+                <p style="color: #CBD5E1; margin-bottom: 1.5rem; font-size: 0.95rem;">Gerencie os cursos disponíveis</p>
+                <a href="/curso/listar" class="btn btn-primary" style="display: inline-block; width: auto; background: #06B6D4;">Abrir Cursos →</a>
+            </div>
+
+            <!-- Card Professores -->
+            <div style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1); text-align: center; border: 1px solid rgba(139, 92, 246, 0.3); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 56px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1)'">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: #10B981;">🎓</div>
+                <h2 style="color: #6EE7B7; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Professores</h2>
+                <p style="color: #CBD5E1; margin-bottom: 1.5rem; font-size: 0.95rem;">Gerencie os dados dos professores</p>
+                <a href="/professor/listar" class="btn btn-primary" style="display: inline-block; width: auto; background: #10B981;">Abrir Professores →</a>
+            </div>
+
+            <!-- Card Disciplinas -->
+            <div style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1); text-align: center; border: 1px solid rgba(139, 92, 246, 0.3); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 56px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1)'">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: #F59E0B;">📖</div>
+                <h2 style="color: #FBBF24; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Disciplinas</h2>
+                <p style="color: #CBD5E1; margin-bottom: 1.5rem; font-size: 0.95rem;">Gerencie as disciplinas</p>
+                <a href="/disciplina/listar" class="btn btn-primary" style="display: inline-block; width: auto; background: #F59E0B;">Abrir Disciplinas →</a>
+            </div>
+
+            <!-- Card Usuários -->
+            <div style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1); text-align: center; border: 1px solid rgba(139, 92, 246, 0.3); transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 16px 56px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 48px rgba(139, 92, 246, 0.2), 0 0 30px rgba(139, 92, 246, 0.1)'">
+                <div style="font-size: 3rem; margin-bottom: 1rem; color: #EF4444;">👤</div>
+                <h2 style="color: #FCA5A5; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Usuários</h2>
+                <p style="color: #CBD5E1; margin-bottom: 1.5rem; font-size: 0.95rem;">Gerencie os usuários do sistema</p>
+                <a href="/usuario/listar" class="btn btn-primary" style="display: inline-block; width: auto; background: #EF4444;">Abrir Usuários →</a>
+            </div>
+        </div>
+    </div>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Gerencie as disciplinas oferecidas</p>
+                <a href="/disciplina/listar" class="btn btn-warning" style="background: var(--warning-color);">Abrir Disciplinas</a>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="/usuario/listar" class="btn btn-secondary">Ir para Usuários</a>
+        </div>
+    </div>
+</body>
+</html>

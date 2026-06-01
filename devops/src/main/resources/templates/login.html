@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema DevOps</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="auth-page">
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sistema DevOps</div>
+            <ul class="nav-links">
+              
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-hero">
+        <div class="auth-copy">
+            <span class="eyebrow">🔐 Acesso Seguro</span>
+            <h1>Efetue o login para fazer o gerenciamento dos cursos</h1>
+            <p>Entre com suas credenciais para acessar o sistema de gerenciamento de alunos, cursos, professores e usuários.</p>
+        </div>
+    </section>
+
+    <div class="container auth-container">
+        <div class="form-container auth-card">
+            <form th:action="@{/login}" method="post">
+                <h2 class="form-title">Acessar Conta</h2>
+
+                <div class="alerta" th:if="${param.error}" style="color: red; margin-bottom: 1rem;">
+                    <p>❌ Login ou senha inválidos. Tente novamente.</p>
+                </div>
+
+                <div class="alerta" th:if="${param.logout}" style="color: green; margin-bottom: 1rem;">
+                    <p>✅ Você saiu do sistema com sucesso.</p>
+                </div>
+
+                <div class="alerta" th:if="${mensagem}" style="margin-bottom: 1rem;">
+                    <p th:text="${mensagem}"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Login</label>
+                    <input type="text" id="username" name="username" placeholder="Digite seu login" required autofocus style="color: #F3F4F6 !important;">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required style="color: #F3F4F6 !important;">
+                </div>
+
+                <div class="auth-links">
+                    <a href="/recuperar-senha">🔑 Esqueci minha senha</a>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">🔐 Entrar no Sistema</button>
+                    <a href="/home" class="btn btn-secondary">← Voltar</a>
+                </div>
+            </form>
+
+                
+        </div>
+    </div>
+</body>
+</html>
